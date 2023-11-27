@@ -3,11 +3,6 @@ import Renderer from "./Renderer"
 
 
 export default class Background extends Component {
-    componentDidMount(): void {
-        new Renderer()
-    }
-
-    render() {
-        return <canvas id="bg" />
-    }
+    componentDidMount = () => new Renderer()
+    render = () => <canvas id="bg" />
 }
