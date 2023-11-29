@@ -7,7 +7,7 @@ export default class Object1 {
     private object: Group
 
     constructor(scene, loader: GLTFLoader) {
-        loader.load("/entei.glb", (gltf) => {
+        loader.load("/logo.glb", (gltf) => {
             this.object = gltf.scene
             this.position()
             scene.add(this.object)
