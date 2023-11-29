@@ -9,6 +9,7 @@ import Object1 from "../classes/Objects/Object1"
 import Object2 from "../classes/Objects/Object2"
 import Object3 from "../classes/Objects/Object3"
 import Object4 from "../classes/Objects/Object4"
+import Object5 from "../classes/Objects/Object5"
 
 export default class Scene extends SceneThree {
     private camera: Camera
@@ -25,6 +26,7 @@ export default class Scene extends SceneThree {
         new Object2(this, loader)
         new Object3(this, loader)
         new Object4(this, loader)
+        new Object5(this, loader)
         this.update(renderer)
     }
 
