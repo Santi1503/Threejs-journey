@@ -3,11 +3,11 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 
 
-export default class MiniLogo {
+export default class Object1 {
     private object: Group
 
     constructor(scene, loader: GLTFLoader) {
-        loader.load("/pokeball.glb", (gltf) => {
+        loader.load("/zekrom.glb", (gltf) => {
             this.object = gltf.scene
             this.position()
             scene.add(this.object)
@@ -16,17 +16,16 @@ export default class MiniLogo {
 
     private position() {
         if (window.innerWidth > 900) {
-            const ratio = (window.innerWidth - 900) * 2.4 / 660 + 14
-            this.object.translateY(-1)
+            const ratio = (window.innerWidth - 900) * -1.5 / 660 + 0.5
+            this.object.translateZ(36.6)
+            this.object.translateY(0.5)
             this.object.translateX(ratio)
-            this.object.translateZ(-23)
-            this.object.rotateY(-Math.PI/1.5)
         } else {
-            this.object.translateY(5.8)
-            this.object.translateZ(-20)
-            this.object.rotateY(-Math.PI/2)
+            this.object.translateZ(38.5)
+            this.object.translateY(1.8)
+            this.object.translateX(0.4)
         }
         this.object.rotateZ(Math.PI/20)
-        this.object.scale.set(2,2,2)
+        this.object.scale.set(1,1,1)
     }
 }
