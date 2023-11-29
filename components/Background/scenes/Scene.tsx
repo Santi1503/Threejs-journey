@@ -4,6 +4,7 @@ import Lights from "../classes/Ligths"
 import Skybox from "../classes/Skybox"
 import Loader from "../classes/Loader"
 import Logo from "../classes/Objects/Logo"
+import MiniLogo from "../classes/Objects/MiniLogo"
 
 export default class Scene extends SceneThree {
     private camera: Camera
@@ -15,6 +16,7 @@ export default class Scene extends SceneThree {
         new Lights(this)
         new Skybox(this)
         new Logo(this, loader)
+        new MiniLogo(this, loader)
         this.update(renderer)
     }
 

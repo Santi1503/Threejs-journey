@@ -3,7 +3,7 @@ import Section from "../components/Section"
 function HomePage() {
     return (
         <div>
-            <div className="container">
+            <div id="container">
                 <Section />
                 <Section />
                 <Section />
