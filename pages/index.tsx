@@ -1,7 +1,17 @@
 import Background from "../components/Background"
-
+import Section from "../components/Section"
 function HomePage() {
-    return <Background />
+    return (
+        <div>
+            <div className="container">
+                <Section />
+                <Section />
+                <Section />
+            </div>
+            <Background />
+        </div>
+    )
+
 }
 
 export default HomePage
