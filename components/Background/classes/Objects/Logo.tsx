@@ -5,6 +5,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 export default class Logo {
     private object: Group
+    private counter: number = 0
 
     constructor(scene, loader: GLTFLoader) {
         loader.load("/logo.glb", (gltf) => {
@@ -12,6 +13,7 @@ export default class Logo {
             this.position()
             scene.add(this.object)
         })
+        this.update()
     }
 
     private position() {
@@ -23,5 +25,11 @@ export default class Logo {
         } else {
             this.object.translateY(7)
         }
+    }
+
+    private update() {
+        this.counter += 0.01
+        if (this.object) this.object.rotation.y = Math.sin(this.counter) / 8
+        requestAnimationFrame(this.update.bind(this))
     }
 }

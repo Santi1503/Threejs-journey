@@ -3,8 +3,9 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 
 
 
-export default class Object1 {
+export default class Object4 {
     private object: Group
+    private counter: number = 0
 
     constructor(scene, loader: GLTFLoader) {
         loader.load("/zekrom.glb", (gltf) => {
@@ -12,6 +13,7 @@ export default class Object1 {
             this.position()
             scene.add(this.object)
         })
+        this.update()
     }
 
     private position() {
@@ -27,5 +29,11 @@ export default class Object1 {
         }
         this.object.rotateZ(Math.PI/20)
         this.object.scale.set(1,1,1)
+    }
+
+    private update() {
+        this.counter += 0.01
+        if(this.object) this.object.rotation.y = Math.sin(this.counter) / 7 + 1.2
+        requestAnimationFrame(this.update.bind(this))
     }
 }
