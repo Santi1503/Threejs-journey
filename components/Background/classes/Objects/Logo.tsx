@@ -8,7 +8,7 @@ export default class Logo {
     private counter: number = 0
 
     constructor(scene, loader: GLTFLoader) {
-        loader.load("/logo.glb", (gltf) => {
+        loader.load("/uneatlantico.glb", (gltf) => {
             this.object = gltf.scene
             this.position()
             scene.add(this.object)
@@ -25,6 +25,7 @@ export default class Logo {
         } else {
             this.object.translateY(7)
         }
+        this.object.scale.set(0.01,0.01,0.01)
     }
 
     private update() {
