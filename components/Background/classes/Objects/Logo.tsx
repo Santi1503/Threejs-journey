@@ -13,7 +13,7 @@ export default class Logo {
             this.position()
             scene.add(this.object)
         })
-        this.update()
+        this.update();
     }
 
     private position() {
@@ -30,7 +30,7 @@ export default class Logo {
         this.object.rotateY(Math.PI - 5.5)
     }
 
-    private update() {
+     private update() {
         this.counter += 0.01
         if (this.object) this.object.rotation.y = (-Math.cos(this.counter))
         requestAnimationFrame(this.update.bind(this))

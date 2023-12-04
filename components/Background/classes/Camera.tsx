@@ -16,7 +16,7 @@ export default class Camera extends PerspectiveCamera {
         const scrollTop = this.container.scrollTop
         const scrollHeight = this.container.scrollHeight
         const offsetHeight = this.container.offsetHeight
-        const t = scrollTop*100 / (scrollHeight - offsetHeight)
+        const t = -scrollTop*100 / (scrollHeight - offsetHeight)
 
         this.position.z = t * 0.35
         this.position.x = t * 0.025
