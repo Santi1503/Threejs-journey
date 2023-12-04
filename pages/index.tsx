@@ -1,4 +1,5 @@
 import Background from "../components/Background"
+import Header from "../components/Header"
 import Section from "../components/Section"
 import Section2 from "../components/Section2"
 import Section3 from "../components/Section3"
@@ -7,6 +8,7 @@ function HomePage() {
     return (
         <div>
             <div id="container">
+                <Header />
                 <Section />
                 <Section2 />
                 <Section3 />

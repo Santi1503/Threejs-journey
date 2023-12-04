@@ -21,7 +21,6 @@ export default class Scene extends SceneThree {
         new Lights(this)
         new Skybox(this)
         new Logo(this, loader)
-        new MiniLogo(this, loader)
         new Object1(this, loader)
         new Object2(this, loader)
         new Object3(this, loader)

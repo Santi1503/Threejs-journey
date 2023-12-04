@@ -1,0 +1,35 @@
+.nav {
+  background: #337ab7;
+  align-items: center;
+}
+
+.nav #social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav #social-media li {
+  padding: 8px;
+  justify-content: right;
+}
+
+.nav #social-media a {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #fff;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.nav a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.nav #social-media img {
+  height: 15px;
+}
